@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.calc {
+  width: 270px;
+  height: 520px;
+  border-radius: 20px;
+  background: #000;
+  color: #fff;
+  font-family: Arial;
+  padding: 20px;
+  margin: 50px auto;
+  -webkit-box-shadow: 4px 4px 4px #4f4f4f;
+          box-shadow: 4px 4px 4px #4f4f4f;
+}
+.calc .screen {
+  height: 125px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+.calc .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  bottom: 0;
+}
+.calc .buttons .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 10px;
+}
+.calc .buttons .container .btn {
+  width: 60px;
+  height: 60px;
+  background: #333;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 25px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.calc .buttons .container .btn:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+.calc .buttons .container .btn:active {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+.calc .buttons .container .bg-grey {
+  background: #a6a6a6;
+  color: #000;
+}
+.calc .buttons .container .bg-orange {
+  background: #ff9501;
+}
+.calc .buttons .container .zero {
+  width: 50%;
+  border-radius: 45px;
+}
