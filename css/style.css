@@ -30,6 +30,9 @@
   font-size: 64px;
   margin-bottom: 20px;
 }
+.calc .screen p {
+  max-width: 250px;
+}
 .calc .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
