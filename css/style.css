@@ -1,23 +1,46 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .calc {
   width: 270px;
-  height: 520px;
-  border-radius: 20px;
+  height: 550px;
+  border-radius: 40px;
   background: #000;
   color: #fff;
   font-family: Arial;
-  padding: 20px;
+  padding: 10px 30px 50px 30px;
   margin: 50px auto;
   -webkit-box-shadow: 4px 4px 4px #4f4f4f;
           box-shadow: 4px 4px 4px #4f4f4f;
+  position: relative;
+}
+.calc .clock-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 5px;
+}
+.calc .clock-status #clock {
+  font-size: 12px;
+}
+.calc .clock-status .status {
+  background-image: url(../img/status.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 60px;
+  height: 15px;
 }
 .calc .screen {
   height: 125px;
-  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,9 +52,8 @@
           align-items: flex-end;
   font-size: 64px;
   margin-bottom: 20px;
-}
-.calc .screen p {
-  max-width: 250px;
+  position: relative;
+  bottom: -40px;
 }
 .calc .buttons {
   display: -webkit-box;
@@ -41,7 +63,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  bottom: 0;
+  position: relative;
+  bottom: -45px;
 }
 .calc .buttons .container {
   display: -webkit-box;
@@ -61,10 +84,6 @@
   line-height: 60px;
   font-size: 25px;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 .calc .buttons .container .btn:hover {
   -webkit-filter: brightness(120%);
@@ -82,6 +101,20 @@
   background: #ff9501;
 }
 .calc .buttons .container .zero {
-  width: 50%;
+  width: 39%;
   border-radius: 45px;
+  text-align: left;
+  padding-left: 25px;
+}
+.calc .buttons .container .obelus {
+  font-size: 35px;
+}
+.calc .line {
+  width: 120px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 2%;
+  left: 32%;
+  border-radius: 20px;
 }

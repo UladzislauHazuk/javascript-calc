@@ -1,3 +1,26 @@
+function currentTime() {
+    const date = new Date();
+    let hour = date.getHours();
+    let min = date.getMinutes();
+
+    hour = updateTime(hour);
+    min = updateTime(min);
+
+    document.getElementById('clock').innerText = `${hour}:${min}`;
+}
+
+let t = setTimeout(currentTime, 1000);
+
+function updateTime(k) {
+    if (k < 10) {
+        return '0' + k;
+    } else {
+        return k;
+    }
+}
+
+currentTime();
+
 function formatScreen(output) {
     if (output.innerText.length <= 6) output.style = 'font-size: 64px';
     if (output.innerText.length > 6) output.style = 'font-size: 45px';
@@ -38,6 +61,12 @@ for (let i = 0; i < btn.length; i++) {
             num = +num * -1;
             history = +history * -1;
             output.innerText = num;
+        } else if (value == 'x') {
+            num = '';
+            history += '*';
+        } else if (value == '÷') {
+            num = '';
+            history += '/';
         } else {
             num = '';
             history += value;
